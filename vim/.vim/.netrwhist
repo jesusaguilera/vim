@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/jesus/.vim/snippets'
+let g:netrw_dirhist_2='/projects/Basal-Bolus_Start/www'
+let g:netrw_dirhist_3='/projects/Creon/HTML/projectMMG'
+let g:netrw_dirhist_4='/projects/MSD AU -CardioMetabolic'
+let g:netrw_dirhist_5='/projects/ES_MSD_AU-OLMETEC_EDETAILING'
+let g:netrw_dirhist_6='/projects/ES_MSD_AU-OLMETEC_EDETAILING_no_original_only_testing_for_cardio'
+let g:netrw_dirhist_7='/projects/ES_MSD_AU-CARDIOMETABOLIC_EDETAILING'
+let g:netrw_dirhist_8='/projects/idetailing/Creon_old/HTML/projectMMG'
+let g:netrw_dirhist_9='/projects/idetailing/ES_MSD_AU-CARDIOMETABOLIC_EDETAILING/MSD/WWW'

@@ -62,3 +62,6 @@ inoremap <c-k> <up>
 inoremap <c-j> <down>
 inoremap <c-h> <left>
 inoremap <c-l> <right>
+
+"Crtl-p plugin
+set runtimepath^=~/.vim/bundle/ctrlp.vim
