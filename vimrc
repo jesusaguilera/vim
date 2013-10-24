@@ -31,6 +31,9 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
+"Clipboard copy
+set clipboard=unnamedplus
+"vmap <C-c> :w !pbcopy<CR><CR>
 
 "Mappging keys
 "Shortcut for NERDTree
@@ -51,8 +54,8 @@ map <silent> <LocalLeader>aa :!make && make upload<CR>
 nmap <C-o> i<Enter><Esc>k<cr>
 
 "Change between insert and normal mode
-nmap <S-j> i
-imap <S-j> <Esc>l
+nmap <C-y> i
+imap <C-y> <Esc>l
 
 "Arduino syntax
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
