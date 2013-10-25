@@ -1,3 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/Users/jaguilera/Box Documents/projects/jaguilera_web'
+let g:netrw_dirhist_2='/Users/jaguilera'
+let g:netrw_dirhist_3='/Users/jaguilera/.vim'
