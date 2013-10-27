@@ -54,9 +54,9 @@ map <silent> <LocalLeader>aa :!make && make upload<CR>
 nmap <C-o> i<Enter><Esc>k<cr>
 
 "Change between insert and normal mode
-nmap <C-y> i
-imap <C-y> <Esc>l
-
+"nmap <C-y> i
+"imap <C-y> <Esc>l
+imap <C-y> <Esc> 
 "Arduino syntax
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 
