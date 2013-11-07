@@ -54,9 +54,11 @@ map <silent> <LocalLeader>aa :!make && make upload<CR>
 nmap <C-o> i<Enter><Esc>k<cr>
 
 "Change between insert and normal mode
-"nmap <C-y> i
-"imap <C-y> <Esc>l
 imap <C-y> <Esc> 
+imap <C-e> <C-y>ei
+imap <C-w> <C-y>wi
+imap <C-b> <C-y>bi
+
 "Arduino syntax
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 
@@ -65,6 +67,16 @@ inoremap <c-k> <up>
 inoremap <c-j> <down>
 inoremap <c-h> <left>
 inoremap <c-l> <right>
+
+"folding settings
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
+
+"Ctags
+"set tags=/home/jaguilera/ctags,/usr/local/bin/ctags
+"set tags=/usr/local/bin/ctags
 
 "Crtl-p plugin
 set runtimepath^=~/.vim/bundle/ctrlp.vim
