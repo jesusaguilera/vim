@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/jaguilera/Box Documents/projects/jaguilera_web'
-let g:netrw_dirhist_2='/Users/jaguilera'
-let g:netrw_dirhist_3='/Users/jaguilera/.vim'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/jaguilera/Documents/my_test/Tutorial-RequireJS-Optimizer'
+let g:netrw_dirhist_2='/Users/jaguilera/Documents/my_test/requirejs-optimizer'
+let g:netrw_dirhist_3='/Users/jaguilera'
+let g:netrw_dirhist_4='/Users/jaguilera/Documents/my_test/requirejs-optimizer'
+let g:netrw_dirhist_5='/project/terminal_customized'
