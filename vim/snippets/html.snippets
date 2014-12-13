@@ -47,6 +47,10 @@ snippet backspace
 # ⎋
 snippet escape
 	&#x238B;
+snippet dash
+	&dash;
+snippet bigdash
+	&mdash;
 # Generic Doctype
 snippet doctype HTML 4.01 Strict
 	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""
@@ -129,6 +133,16 @@ snippet style
 	</style>${3}
 snippet base
 	<base href="${1}" target="${2}"`Close()`>
+
+snippet a
+	<a href="${1}">${2}</a>
+
+snippet span
+	<span class="${1}"></span>
+
+snippet p
+	<p class="${1}"></p>
+
 snippet r
 	<br`Close()[1:]`>
 snippet div

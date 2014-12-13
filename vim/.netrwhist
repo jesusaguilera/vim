@@ -1,7 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/jaguilera/Documents/my_test/Tutorial-RequireJS-Optimizer'
-let g:netrw_dirhist_2='/Users/jaguilera/Documents/my_test/requirejs-optimizer'
-let g:netrw_dirhist_3='/Users/jaguilera'
-let g:netrw_dirhist_4='/Users/jaguilera/Documents/my_test/requirejs-optimizer'
-let g:netrw_dirhist_5='/project/terminal_customized'
+let g:netrw_dirhist_2='/projects/ES_DSE_Coagulation-Center_Website'
+let g:netrw_dirhist_3='/projects/ES_AbbVie_Humira-HS_Website/html-layout'
+let g:netrw_dirhist_4='/projects/ES_DSE_Coagulation-Center_Website'
+let g:netrw_dirhist_5='/Users/jaguilera/Documents/my_test/grunt-testing'
+let g:netrw_dirhist_6='/Users/jaguilera/Documents/my_test/grunt-primeros-pasos'
+let g:netrw_dirhist_7='/Users/Ja'
