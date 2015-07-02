@@ -1,1 +1,0 @@
-tcomment.vba: call delete('/Users/jaguilera/.vim/doc/tcomment.txt')|call delete('/Users/jaguilera/.vim/plugin/tcomment.vim')|call delete('/Users/jaguilera/.vim/autoload/tcomment.vim')

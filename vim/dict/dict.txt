@@ -32,6 +32,11 @@ email
 
 
 // css scss
+opacity
+inline
+transparent
+cursor
+pointer
 first
 last
 child
@@ -98,7 +103,9 @@ Helvetica
 HelveticaNeue
 
 
-// javascript & jQuery
+// javascript & jquery
+document
+return
 this
 true
 false
@@ -342,6 +349,7 @@ contrib
 
 
 // nodejs
+require
 json
 module
 exports
