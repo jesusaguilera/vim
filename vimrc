@@ -1,7 +1,7 @@
 "  General configuration
  set nocompatible
  set laststatus=2                  "Always show the statusline
- source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim "powerlinefonts on OSX
+"  source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim "powerlinefonts on OSX
  set encoding=utf-8                "Necessary to show Unicode glyphs
  set hidden
  set mouse=a                        "Mouse move
@@ -61,7 +61,7 @@
  " Color
  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  syntax on 
- colorscheme solarized
+ colorscheme lucius
  let g:solarized_termcolors = 16   "We need this in order to see solarized theme correctly
  let g:solarized_visibility = "high"
  let g:solarized_contrast = "high"
@@ -250,6 +250,7 @@
  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  "Shortcut for NERDTree
  map <C-l> :NERDTreeToggle<cr>
+ map <C-m> :CtrlPMixed<cr>
 
  "Shortcut for comment 
  map <C-i> <c-_><c-_>

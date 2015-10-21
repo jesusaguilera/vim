@@ -1,11 +1,14 @@
 # Comments
 snippet cm 
 	/*
+
    * ${1:Name}
    */
 
+
 snippet c
 	// ${1:Name}
+
 
 
 # Mixins
@@ -15,6 +18,7 @@ snippet @m
 	}
 
 
+
 # Each 
 snippet each
 	@each ${1:Name} in ${2:Name} {
@@ -22,11 +26,13 @@ snippet each
 	}
 
 
+
 # Each 
 snippet for
 	@for ${1:Name} from 1 through 3 {
 		.item-${1:Name} {...}
 	}
+
 
 # Include 
 snippet @i
@@ -38,31 +44,45 @@ snippet media
 	@media screen and (${1:Name}: ${2:argument}) {
 	}
 
+snippet mediab 
+  @media ( min-width: $screen-${1:Name}-min ) {
+   }
+
 
 # Backgrounds
 snippet b
 	background: transparent url("${1:Name}") 0 0 no-repeat;
+
 snippet bc
 	background-color: #${1:Name};
+
 snippet bp
 	background-position: 0 0;
+
 snippet br
 	background-repeat: no-repeat;
+
 snippet bs
 	background-size: cover;
+
 
 
 # Border
 snippet bo
 	border: ${1:Name};
+
 snippet bot
 	border-top: ${1:Name};
+
 snippet bob
 	border-bottom: ${1:Name};
+
 snippet bol
 	border-left: ${1:Name};
+
 snippet bor
 	border-right: ${1:Name};
+
 
 
 # Colors
@@ -132,14 +152,15 @@ snippet m
 	margin: ${1:Name};
 snippet mt
 	margin-top: ${1:Name};
+
 snippet mb
 	margin-bottom: ${1:Name};
+
 snippet ml
 	margin-left: ${1:Name};
+
 snippet mr
 	margin-right: ${1:Name};
-
-
 #paddings
 snippet pd
 	padding: ${1:Name};
