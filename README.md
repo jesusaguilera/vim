@@ -15,12 +15,15 @@ The vimrc file contains optional runtime configuration settings to initialize Vi
 ### What about plugins?
 Feel free to help yourself  [**Vimawesome.com**](http://vimawesome.com/)  
 
-**My favourites plugins ;)**
+**My favourites plugins**
 
 - [CtrlP](https://github.com/kien/ctrlp.vim)
 - [NerdTree](https://github.com/scrooloose/nerdtree)
 - [vim-autocomplpop](https://github.com/othree/vim-autocomplpop)
-- [EasyGrep](https://github.com/vim-scripts/EasyGrep)
+
+**finding and replacing across multiple files on vim **
+- :args app/stylesheets/**/*.css
+- :argdo :%s/pattern/new_pattern/gc | update 
 
 ### Vim is not for me
 [**Vim for people who think things like Vim are weird and hard**](http://csswizardry.com/2014/06/vim-for-people-who-think-things-like-vim-are-weird-and-hard/)
