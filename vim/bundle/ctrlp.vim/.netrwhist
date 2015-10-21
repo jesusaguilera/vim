@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/projects/Edetailings/ES_Abbvie_HCV_IT-EXPLORIA-EDETAILING/RFHW/hcv_viekirax-exviera_na_it_it/assets/global'
-let g:netrw_dirhist_2='/projects/Edetailings/ES_Abbvie_HCV_IT-EXPLORIA-EDETAILING/RFHW/hcv_viekirax-exviera_na_it_it/assets/global/html'
-let g:netrw_dirhist_3='/Users/jaguilera/Documents/my_test/Tutorial-RequireJS-Optimizer'
