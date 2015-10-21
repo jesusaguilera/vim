@@ -21,7 +21,7 @@ Feel free to help yourself  [**Vimawesome.com**](http://vimawesome.com/)
 - [NerdTree](https://github.com/scrooloose/nerdtree)
 - [vim-autocomplpop](https://github.com/othree/vim-autocomplpop)
 
-**finding and replacing across multiple files on vim **
+### Finding and replacing across multiple files on vim 
 - :args app/stylesheets/**/*.css
 - :argdo :%s/pattern/new_pattern/gc | update 
 
