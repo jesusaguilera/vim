@@ -12,6 +12,16 @@ Despite what the above comic suggests, Vim can be configured to work in a very s
 ### What is vimrc?
 The vimrc file contains optional runtime configuration settings to initialize Vim when it starts. On Unix based systems, the file is named .vimrc, while on Windows systems it is named _vimrc.
 
+### Installing vim on OSX
+```sh
+- brew install macvim
+```
+
+### Running macvim on terminal
+```sh
+- mvim -v file-name
+```
+
 ### What about plugins?
 Feel free to help yourself  [**Vimawesome.com**](http://vimawesome.com/)  
 
