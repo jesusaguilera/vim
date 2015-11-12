@@ -20,6 +20,10 @@ Feel free to help yourself  [**Vimawesome.com**](http://vimawesome.com/)
 - [CtrlP](https://github.com/kien/ctrlp.vim)
 - [NerdTree](https://github.com/scrooloose/nerdtree)
 - [vim-autocomplpop](https://github.com/othree/vim-autocomplpop)
+- [bufexplorer](https://github.com/jlanzarotta/bufexplorer)
+
+### Faster grepping in vim 
+[Faster grepping in vim](https://robots.thoughtbot.com/faster-grepping-in-vim)
 
 ### Finding and replacing across multiple files on vim 
 ```sh

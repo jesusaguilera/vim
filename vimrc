@@ -8,7 +8,7 @@
  "set nowrap                        "don't wrap lines
  "Set lines and columns
  "au BufRead,BufNewFile *.md setlocal textwidth=80
- set tabstop=2                     "a tab is four spaces
+ set tabstop=3                     "a tab is four spaces
  "set backspace=indent,el,start
  set modifiable                    "make file modifacable (on nerdtree)
  set number                        "always show line numbers
@@ -125,6 +125,7 @@
  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  " Set a dictionary for autocomplete
  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+ set dictionary+=~/.vim/snippets/*.snippets
  set dictionary+=~/.vim/dict/dict.txt
 
 
@@ -156,6 +157,22 @@
  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  set runtimepath^=~/.vim/bundle/ctrlp.vim
  let g:ctrlp_show_hidden = 1 "show hidden files 
+
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+
+" bind \ (backward slash) to grep shortcut
+command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+nnoremap \ :Ag<SPACE>
 
 
 
@@ -251,9 +268,6 @@
  "Shortcut for NERDTree
  map <C-l> :NERDTreeToggle<cr>
 
- "Shortcut for CtrlP ( show recent files )
- map <C-m> :CtrlPMixed<cr>
-
  "Shortcut for comment 
  map <C-i> <c-_><c-_>
 
@@ -268,9 +282,9 @@
  inoremap <c-j> <down>
  inoremap <c-h> <left>
  inoremap <c-l> <right>
- imap <C-e> <C-y>ei
- imap <C-w> <C-y>wi
- imap <C-b> <C-y>bi
 
  " Toggle line numbering
  nnoremap <C-x> :set nonumber!<CR>
+
+ " Show bufexplorer
+ nnoremap · :BufExplorer<CR>
