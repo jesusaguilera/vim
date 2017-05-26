@@ -121,6 +121,12 @@ insertAfter
 outerHeight
 getAttribute
 nodeType
+extends
+createElementNS
+importNode
+textContent
+querySelector
+class
 nodeName
 nodeValue
 className
@@ -250,6 +256,10 @@ getElementById
 write
 collapse
 createContextualFragment
+registerElement
+createCallback
+currentScript
+ownerDocument
 moveEnd
 moveStart
 parentElement
