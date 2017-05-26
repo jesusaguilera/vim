@@ -120,7 +120,6 @@ offset
 offsetParent
 insertAfter
 outerHeight
-getAttribute
 nodeType
 extends
 createElementNS
@@ -167,6 +166,8 @@ splice
 parse
 toDateString
 toTimeString
+getAttribute
+getUser
 getDate
 getDay
 getFullYear
