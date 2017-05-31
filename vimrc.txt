@@ -220,7 +220,7 @@ set statusline+=%*
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set html.erb like html files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
+autocmd BufNewFile,BufRead *.html.erb set filetype=html
 
 
 
@@ -229,7 +229,7 @@ autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set scss like css
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au BufRead,BufNewFile *.scss set filetype=scss.css
+au BufRead,BufNewFile *.scss set filetype=css
 
 
 
