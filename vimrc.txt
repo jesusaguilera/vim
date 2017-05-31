@@ -62,12 +62,24 @@ set diffopt+=vertical             "Switch to Vertical on diff
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on 
 "  colorscheme lucius
-colorscheme mango
-let g:solarized_termcolors = 16   "We need this in order to see solarized theme correctly
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
-set background=dark
+" colorscheme mango
 
+colorscheme OceanicNext
+
+let g:solarized_termcolors = 16   "We need this in order to see solarized theme correctly
+" let g:solarized_visibility = "high"
+" let g:solarized_contrast = "high"
+" set background=dark
+
+
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable JSX syntax on JS files
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:jsx_ext_required = 0
 
 
 
@@ -282,10 +294,10 @@ imap jj <Esc>
 nmap <C-o> i<Enter><Esc>k<cr>
 
 "Movement on inser mode
-inoremap <c-k> <up>
-inoremap <c-j> <down>
-inoremap <c-h> <left>
-inoremap <c-l> <right>
+imap <C-k> <up>
+imap <C-j> <down>
+imap <C-h> <left>
+imap <C-l> <right>
 
 " Toggle line numbering
 nnoremap <C-x> :set nonumber!<CR>
