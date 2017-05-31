@@ -180,7 +180,7 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
@@ -228,7 +228,7 @@ autocmd BufNewFile,BufRead *.html.erb set filetype=html
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set scss like css
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au BufRead,BufNewFile *.scss set filetype=css
 
 
@@ -279,7 +279,7 @@ let g:move_key_modifier = 'C'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NerdTree shows hidden files
+" NerdTree plugins shows hidden files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let NERDTreeShowHidden=1
 
