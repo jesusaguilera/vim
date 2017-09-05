@@ -229,7 +229,7 @@ autocmd BufNewFile,BufRead *.html.erb set filetype=html
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set scss like css
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au BufRead,BufNewFile *.scss set filetype=css
+au BufRead,BufNewFile *.scss set filetype=scss
 
 
 
@@ -292,8 +292,14 @@ let NERDTreeShowHidden=1
 "Shortcut for NERDTree
 map <C-l> :NERDTreeToggle<cr>
 
+"
 "Shortcut for comment 
+"
 map <C-i> <c-_><c-_>
+"Block comment inline
+map <C-w> <S-^>v<S-$><c-_>i
+"Block comment
+map <C-b> <c-_>b 
 
 " Change between insert and normal mode
 imap jj <Esc>
