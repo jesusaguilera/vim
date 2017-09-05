@@ -297,7 +297,7 @@ map <C-l> :NERDTreeToggle<cr>
 "
 map <C-i> <c-_><c-_>
 "Block comment inline
-map <C-w> <S-^>v<S-$><c-_>i
+" map <C-b><S-^>v<S-$><c-_>i
 "Block comment
 map <C-b> <c-_>b 
 
