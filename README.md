@@ -12,15 +12,21 @@ Despite what the above comic suggests, Vim can be configured to work in a very s
 ### What is vimrc?
 The vimrc file contains optional runtime configuration settings to initialize Vim when it starts. On Unix based systems, the file is named .vimrc, while on Windows systems it is named _vimrc.
 
-### Installing vim on OSX
+### Installing vim with python3 on OSX
 ```sh
-- brew install macvim
+- brew install macvim  --override-system-vim --with-lua --with-python3
 ```
+- Don't have you installed Homebrew yet? [Homebrew](https://brew.sh/index.html)
 
 ### Running macvim on terminal
 ```sh
 - mvim -v file-name
 ```
+
+### What about plugins?
+**My plugin manager** 
+
+- [vim-plug](https://github.com/junegunn/vim-plug)
 
 ### What about plugins?
 Feel free to help yourself  [**Vimawesome.com**](http://vimawesome.com/)  
@@ -29,16 +35,16 @@ Feel free to help yourself  [**Vimawesome.com**](http://vimawesome.com/)
 
 - [CtrlP](https://github.com/kien/ctrlp.vim)
 - [NerdTree](https://github.com/scrooloose/nerdtree)
-- [vim-autocomplpop](https://github.com/othree/vim-autocomplpop)
 - [bufexplorer](https://github.com/jlanzarotta/bufexplorer)
 
 ### Faster grepping in vim 
 [Faster grepping in vim](https://robots.thoughtbot.com/faster-grepping-in-vim)
 
 ### Finding and replacing across multiple files on vim 
+[https://chrisarcand.com/vims-new-cdo-command/](https://chrisarcand.com/vims-new-cdo-command/)
 ```sh
-- :args app/stylesheets/**/*.css
-- :argdo :%s/pattern/new_pattern/gc | update 
+- :Ag foo
+- :cdo s/foo/bar/g | update
 ```
 
 ### Vim is not for me
