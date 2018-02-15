@@ -23,19 +23,19 @@ The vimrc file contains optional runtime configuration settings to initialize Vi
 - mvim -v file-name
 ```
 
+
 ### What about plugins?
 **My plugin manager** 
 
 - [vim-plug](https://github.com/junegunn/vim-plug)
-
-### What about plugins?
-Feel free to help yourself  [**Vimawesome.com**](http://vimawesome.com/)  
 
 **My favourites plugins**
 
 - [CtrlP](https://github.com/kien/ctrlp.vim)
 - [NerdTree](https://github.com/scrooloose/nerdtree)
 - [bufexplorer](https://github.com/jlanzarotta/bufexplorer)
+
+Feel free to help yourself  [**Vimawesome.com**](http://vimawesome.com/)  
 
 ### Faster grepping in vim 
 [Faster grepping in vim](https://robots.thoughtbot.com/faster-grepping-in-vim)
