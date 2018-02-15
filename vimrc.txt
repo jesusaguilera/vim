@@ -1,15 +1,10 @@
 "  General configuration
 set nocompatible
 set laststatus=2                  "Always show the statusline
-"  source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim "powerlinefonts on OSX
 set encoding=utf-8                "Necessary to show Unicode glyphs
 set hidden
 set mouse=a                        "Mouse move
-"set nowrap                        "don't wrap lines
-"Set lines and columns
-"au BufRead,BufNewFile *.md setlocal textwidth=80
 set tabstop=3                     "a tab is four spaces
-"set backspace=indent,el,start
 set modifiable                    "make file modifacable (on nerdtree)
 set number                        "always show line numbers
 set shiftwidth=2                  "number of sapces to use for autoindenting
@@ -22,21 +17,16 @@ set smartindent                   "be smart about it
 set softtabstop=2                 "yep, two
 set shiftwidth=2                  " ..
 set expandtab                     "expand tabs to spaces
-"set nosmarttab                   "fuck tabs
 set formatoptions+=n              "support for numbered/bullet lists
 set virtualedit=block             "allow virtual edit in visual block ..
-
 set hlsearch                      "higlight search terms
 set incsearch           
-set t_Co=256                      "force vim to use 256 colors
-"set guifont=Monaco:h24            "set font and size
 set title                         "change the terminal's title
 set visualbell                    "don't beep
 set noerrorbells                  "don't beep
 set noswapfile
 set nobackup
 set guioptions+=b
-
 set wildmenu                      "turn on wild menu
 set wildmode=longest,list         "filename completion
 set ruler                         "Always show current positions along the bottom
@@ -44,8 +34,8 @@ set cmdheight=2                   "the command bar is 2 high
 set showmatch                     "show matching brackets
 set mat=5                         "how many tenths of a second to blink matching brackets foor
 set so=10                         "Keep 10 lines (top/bottom) for scope
-"set paste                         "Set paste for default
 set diffopt+=vertical             "Switch to Vertical on diff
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Reach vim more snappy
@@ -57,19 +47,65 @@ set diffopt+=vertical             "Switch to Vertical on diff
 
 
 
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins will be downloaded under the specified directory.
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+call plug#begin('~/.vim/plugged')
+
+" Declare the list of plugins.
+Plug 'mhartington/oceanic-next'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'kien/ctrlp.vim'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'tomtom/tcomment_vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'jiangmiao/auto-pairs'
+Plug 'chriskempson/base16-vim'
+Plug 'alnjxn/oceanic-next-vim'
+Plug 'trevordmiller/nova-vim'
+Plug 'scrooloose/nerdtree'
+Plug 'mxw/vim-jsx'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'matze/vim-move'
+Plug 'eparreno/vim-l9'
+Plug 'othree/vim-autocomplpop'
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+syntax on 
+colorscheme base16-oceanicnext
+
+
+
+
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-syntax on 
-"  colorscheme lucius
-" colorscheme mango
 
-colorscheme OceanicNext
 
-let g:solarized_termcolors = 16   "We need this in order to see solarized theme correctly
-" let g:solarized_visibility = "high"
-" let g:solarized_contrast = "high"
-" set background=dark
+" Theme
+"  syntax enable
+" for vim 7
+"  set t_Co=256
+
+" for vim 8
+" if (has("termguicolors"))
+   " set termguicolors
+" endif
 
 
 
@@ -109,7 +145,7 @@ set undoreload=10000              "maximum number lines to save for undo on a bu
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Filetype plugin On
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-filetype plugin on
+" filetype plugin on
 
 
 
@@ -118,9 +154,9 @@ filetype plugin on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Run pathogen
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
+"execute pathogen#infect()
+"syntax on
+"filetype plugin indent on
 
 
 
@@ -171,7 +207,7 @@ autocmd InsertEnter * :set number
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Crtl-p plugin
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+set runtimepath^=~/.vim/plugged/ctrlp.vim
 let g:ctrlp_show_hidden = 1 "show hidden files 
 
 " The Silver Searcher
@@ -238,12 +274,12 @@ au BufRead,BufNewFile *.scss set filetype=scss
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set autocomplete for a set of files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-filetype plugin on
-au FileType php setl ofu=phpcomplete#CompletePHP
-au FileType ruby,eruby setl ofu=rubycomplete#Complete
-au FileType html,xhtml,erb setl ofu=htmlcomplete#CompleteTags
-au FileType c setl ofu=ccomplete#CompleteCpp
-au FileType css,scss setl ofu=csscomplete#CompleteCSS
+" filetype plugin on
+" au FileType php setl ofu=phpcomplete#CompletePHP
+" au FileType ruby,eruby setl ofu=rubycomplete#Complete
+" au FileType html,xhtml,erb setl ofu=htmlcomplete#CompleteTags
+" au FileType c setl ofu=ccomplete#CompleteCpp
+" au FileType css,scss setl ofu=csscomplete#CompleteCSS
 
 
 
@@ -254,7 +290,7 @@ au FileType css,scss setl ofu=csscomplete#CompleteCSS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ""set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h15
 let g:airline_powerline_fonts = 1
-let g:airline_theme='molokai'
+let g:airline_theme='oceanicnext'
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
@@ -340,6 +376,6 @@ let g:ag_prg="<custom-ag-path-goes-here> --vimgrep"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Load another colorscheme for Gdiff
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if &diff
-    colorscheme up
-endif
+" if &diff
+"     colorscheme up
+" endif
