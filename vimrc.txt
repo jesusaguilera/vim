@@ -1,55 +1,3 @@
-"  General configuration
-set nocompatible
-set laststatus=2                  "Always show the statusline
-set encoding=utf-8                "Necessary to show Unicode glyphs
-set hidden
-set mouse=a                        "Mouse move
-set tabstop=3                     "a tab is four spaces
-set modifiable                    "make file modifacable (on nerdtree)
-set number                        "always show line numbers
-set shiftwidth=2                  "number of sapces to use for autoindenting
-set shiftround                    "use multiple of shiftwidth when indenting whit '<' and  '>>'
-set showmatch                     "set shwo matching parenthesis
-set ignorecase                    "ignore case whne searching
-set smartcase                     "ignore case if search pattern is all lowercase, case-sensitive otherwise
-set autoindent                    "automatic indent new lines
-set smartindent                   "be smart about it
-set softtabstop=2                 "yep, two
-set shiftwidth=2                  " ..
-set expandtab                     "expand tabs to spaces
-set formatoptions+=n              "support for numbered/bullet lists
-set virtualedit=block             "allow virtual edit in visual block ..
-set hlsearch                      "higlight search terms
-set incsearch           
-set title                         "change the terminal's title
-set visualbell                    "don't beep
-set noerrorbells                  "don't beep
-set noswapfile
-set nobackup
-set guioptions+=b
-set wildmenu                      "turn on wild menu
-set wildmode=longest,list         "filename completion
-set ruler                         "Always show current positions along the bottom
-set cmdheight=2                   "the command bar is 2 high
-set showmatch                     "show matching brackets
-set mat=5                         "how many tenths of a second to blink matching brackets foor
-set so=10                         "Keep 10 lines (top/bottom) for scope
-set diffopt+=vertical             "Switch to Vertical on diff
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Reach vim more snappy
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" set ttyfast
-" set lazyredraw
-
-
-
-
-
-
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins will be downloaded under the specified directory.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -76,6 +24,7 @@ Plug 'garbas/vim-snipmate'
 Plug 'matze/vim-move'
 Plug 'eparreno/vim-l9'
 Plug 'othree/vim-autocomplpop'
+Plug 'sheerun/vim-polyglot'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -84,9 +33,54 @@ Plug 'vim-airline/vim-airline-themes'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
-syntax on 
-colorscheme base16-oceanicnext
 
+
+"""""""""""""""""""""""
+"  General configuration
+"""""""""""""""""""""""
+set nocompatible
+set laststatus=2                  "Always show the statusline
+set encoding=utf-8                "Necessary to show Unicode glyphs
+set hidden
+set mouse=a                        "Mouse move
+set tabstop=3                     "a tab is four spaces
+set modifiable                    "make file modifacable (on nerdtree)
+set number                        "always show line numbers
+set shiftwidth=2                  "number of sapces to use for autoindenting
+set shiftround                    "use multiple of shiftwidth when indenting whit '<' and  '>>'
+set diffopt+=vertical             "Switch to Vertical on diff
+set showmatch                     "set shwo matching parenthesis
+set ignorecase                    "ignore case whne searching
+set smartcase                     "ignore case if search pattern is all lowercase, case-sensitive otherwise
+set autoindent                    "automatic indent new lines
+set smartindent                   "be smart about it
+set softtabstop=2                 "yep, two
+set shiftwidth=2                  " ..
+set expandtab                     "expand tabs to spaces
+set formatoptions+=n              "support for numbered/bullet lists
+set virtualedit=block             "allow virtual edit in visual block ..
+set hlsearch                      "higlight search terms
+set incsearch           
+set title                         "change the terminal's title
+set visualbell                    "don't beep
+set noerrorbells                  "don't beep
+set noswapfile
+set nobackup
+set guioptions+=b
+set wildmenu                      "turn on wild menu
+set wildmode=longest,list         "filename completion
+set ruler                         "Always show current positions along the bottom
+set cmdheight=2                   "the command bar is 2 high
+set showmatch                     "show matching brackets
+set mat=5                         "how many tenths of a second to blink matching brackets foor
+" set so=10                         "Keep 10 lines (top/bottom) for scope
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Reach vim more snappy
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" set ttyfast
+" set lazyredraw
 
 
 
@@ -95,17 +89,12 @@ colorscheme base16-oceanicnext
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
 " Theme
-"  syntax enable
-" for vim 7
-"  set t_Co=256
+ syntax enable
+ set termguicolors
+ set background=dark
 
-" for vim 8
-" if (has("termguicolors"))
-   " set termguicolors
-" endif
+colorscheme nova
 
 
 
@@ -186,10 +175,11 @@ set dictionary+=~/.vim/dict/dict.txt
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "  hi Search cterm=NONE ctermfg=white ctermbg=blue
 hi Visual cterm=NONE ctermbg=239 ctermfg=174 guibg=#e5b800
-hi CursorLine   ctermbg=235
-hi CursorColumn ctermbg=240 ctermfg=white guibg=darkred guifg=white
+" hi CursorLine   ctermbg=235
+" hi CursorColumn ctermbg=240 ctermfg=white guibg=darkred guifg=white
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>                                                                                                             
 set cursorline! cursorcolumn! 
+
 
 
 
@@ -199,6 +189,15 @@ set cursorline! cursorcolumn!
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd InsertLeave * :set relativenumber
 autocmd InsertEnter * :set number
+
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Display images from Vim with imgcat 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufEnter *.png,*.jpg,*gif exec "! ~/.iterm2/imgcat ".expand("%") | :bw
 
 
 
