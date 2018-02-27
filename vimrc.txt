@@ -6,25 +6,31 @@ call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
 Plug 'mhartington/oceanic-next'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'kien/ctrlp.vim'
-Plug 'jlanzarotta/bufexplorer'
+Plug 'alnjxn/oceanic-next-vim'
+Plug 'chriskempson/base16-vim'
+Plug 'trevordmiller/nova-vim'
+Plug 'lilydjwg/colorizer'
+
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'jiangmiao/auto-pairs'
-Plug 'chriskempson/base16-vim'
-Plug 'alnjxn/oceanic-next-vim'
-Plug 'trevordmiller/nova-vim'
-Plug 'scrooloose/nerdtree'
-Plug 'mxw/vim-jsx'
+Plug 'adelarsq/vim-matchit'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'matze/vim-move'
 Plug 'eparreno/vim-l9'
 Plug 'othree/vim-autocomplpop'
-Plug 'sheerun/vim-polyglot'
+Plug 'ryanoasis/vim-devicons' " After install this plugins install InconsolataGo or InconsolataLGC from NerdFonts
+
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'othree/html5.vim'
+" Plug 'sheerun/vim-polyglot'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -76,12 +82,38 @@ set mat=5                         "how many tenths of a second to blink matching
 " set so=10                         "Keep 10 lines (top/bottom) for scope
 
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Reach vim more snappy
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " set ttyfast
 " set lazyredraw
 
+" loading the plugin
+let g:webdevicons_enable = 1
+" adding the flags to NERDTree
+let g:webdevicons_enable_nerdtree = 1
+" adding the custom source to unite
+let g:webdevicons_enable_unite = 1
+" adding the column to vimfiler
+let g:webdevicons_enable_vimfiler = 1
+" adding to vim-airline's tabline
+let g:webdevicons_enable_airline_tabline = 1
+" adding to vim-airline's statusline
+let g:webdevicons_enable_airline_statusline = 1
+" ctrlp glyphs
+let g:webdevicons_enable_ctrlp = 1
+" turn on/off file node glyph decorations (not particularly useful)
+let g:WebDevIconsUnicodeDecorateFileNodes = 1
+" use double-width(1) or single-width(0) glyphs
+" only manipulates padding, has no effect on terminal or set(guifont) font
+let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
+" whether or not to show the nerdtree brackets around flags
+let g:webdevicons_conceal_nerdtree_brackets = 1
+" Force extra padding in NERDTree so that the filetype icons line up vertically
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+" Adding the custom source to denite
+let g:webdevicons_enable_denite = 1
 
 
 
@@ -126,26 +158,6 @@ set undodir=~/.vim/undodir        "where to save undo histories
 set undofile                      "set undor directory
 set undolevels=1000               "maximum number of changes that can be undone
 set undoreload=10000              "maximum number lines to save for undo on a buffer reload
-
-
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Filetype plugin On
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" filetype plugin on
-
-
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Run pathogen
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"execute pathogen#infect()
-"syntax on
-"filetype plugin indent on
 
 
 
@@ -287,7 +299,7 @@ au BufRead,BufNewFile *.scss set filetype=scss
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "vim-airline"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h15
+"set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h15
 let g:airline_powerline_fonts = 1
 let g:airline_theme='oceanicnext'
 if !exists('g:airline_symbols')
@@ -369,6 +381,22 @@ set foldlevel=1
 
 
 let g:ag_prg="<custom-ag-path-goes-here> --vimgrep"
+
+
+
+
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim-javascript configuration
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1
+
+
 
 
 
