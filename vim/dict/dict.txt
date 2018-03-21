@@ -104,6 +104,7 @@ HelveticaNeue
 
 
 // javascript & jquery
+insertAdjacentHTML
 async
 document
 return
