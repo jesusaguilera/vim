@@ -10,6 +10,7 @@ Plug 'alnjxn/oceanic-next-vim'
 Plug 'chriskempson/base16-vim'
 Plug 'trevordmiller/nova-vim'
 Plug 'lilydjwg/colorizer'
+Plug 'larsbs/vimterial'
 
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-syntastic/syntastic'
@@ -49,10 +50,11 @@ set laststatus=2                  "Always show the statusline
 set encoding=utf-8                "Necessary to show Unicode glyphs
 set hidden
 set mouse=a                        "Mouse move
-set tabstop=3                     "a tab is four spaces
+set tabstop=4                     "a tab is four spaces
+set softtabstop=4                 "yep, four
 set modifiable                    "make file modifacable (on nerdtree)
 set number                        "always show line numbers
-set shiftwidth=2                  "number of sapces to use for autoindenting
+set shiftwidth=4                  "number of sapces to use for autoindenting
 set shiftround                    "use multiple of shiftwidth when indenting whit '<' and  '>>'
 set diffopt+=vertical             "Switch to Vertical on diff
 set showmatch                     "set shwo matching parenthesis
@@ -60,8 +62,6 @@ set ignorecase                    "ignore case whne searching
 set smartcase                     "ignore case if search pattern is all lowercase, case-sensitive otherwise
 set autoindent                    "automatic indent new lines
 set smartindent                   "be smart about it
-set softtabstop=2                 "yep, two
-set shiftwidth=2                  " ..
 set expandtab                     "expand tabs to spaces
 set formatoptions+=n              "support for numbered/bullet lists
 set virtualedit=block             "allow virtual edit in visual block ..
@@ -166,7 +166,8 @@ let g:WebDevIconsOS = 'Darwin'
  set termguicolors
  set background=dark
 
-colorscheme nova
+colorscheme vimterial
+" colorscheme nova
 
 
 
@@ -221,16 +222,18 @@ set dictionary+=~/.vim/dict/dict.txt
 
 
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Highlight on select line                                                                                                                                                                             
+"Highlight on select line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "  hi Search cterm=NONE ctermfg=white ctermbg=blue
-hi Visual cterm=NONE ctermbg=239 ctermfg=174 guibg=#e5b800
+hi Visual cterm=NONE ctermbg=239 ctermfg=174 guibg=#9BB1D3
+"
+" CursorLine & cursorcolumn
+"
 " hi CursorLine   ctermbg=235
 " hi CursorColumn ctermbg=240 ctermfg=white guibg=darkred guifg=white
-nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>                                                                                                             
-set cursorline! cursorcolumn! 
+" nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>                                                                                                             
+" set cursorline! cursorcolumn! 
 
 
 
@@ -330,7 +333,7 @@ au BufRead,BufNewFile *.scss set filetype=scss
 " au FileType ruby,eruby setl ofu=rubycomplete#Complete
 " au FileType html,xhtml,erb setl ofu=htmlcomplete#CompleteTags
 " au FileType c setl ofu=ccomplete#CompleteCpp
-" au FileType css,scss setl ofu=csscomplete#CompleteCSS
+au FileType css,scss setl ofu=csscomplete#CompleteCSS
 
 
 

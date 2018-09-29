@@ -29,6 +29,11 @@ password
 checked
 reset
 email
+polygon
+rect 
+circle 
+svg 
+dest 
 
 
 // css scss
@@ -353,9 +358,37 @@ zoom
 gif
 png
 jpg
+focus 
+focus-within
+
 
 
 // javascript & jquery
+prototype
+some
+map
+Map
+copyWithin
+entries
+every
+fill
+findIndex
+flatMap
+flatten
+forEach
+includes
+keys
+reduce
+reduceRight
+reverse
+shift
+sort
+toSource
+values
+Promise
+resolve
+reject
+currentTarget
 let
 const
 insertAdjacentHTML
@@ -425,6 +458,7 @@ toTimeString
 getElementsByClassName
 getAttribute
 getUser
+Date
 getDate
 getDay
 getFullYear
@@ -436,6 +470,10 @@ getSeconds
 getTime
 getTimezoneOffset
 getYear
+getUTCFullYear
+getUTCFullHours
+getUTCFullMonth
+getUTCFullSeconds
 setDate
 setHours
 setMilliseconds
@@ -629,6 +667,7 @@ package
 
 
 // react
+warn
 React
 Components
 TouchableOpacity
@@ -638,6 +677,14 @@ Image
 state
 setState
 react-native
+Polygon
+Rect
+Circle
+Dest
+Mask
+Svg
+Path
+Prototype
 
 
 // gulp
