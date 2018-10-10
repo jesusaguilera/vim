@@ -5,6 +5,8 @@
 call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
+" Themes
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'mhartington/oceanic-next'
 Plug 'alnjxn/oceanic-next-vim'
 Plug 'chriskempson/base16-vim'
@@ -14,15 +16,18 @@ Plug 'larsbs/vimterial'
 
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-syntastic/syntastic'
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 Plug 'adelarsq/vim-matchit'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
+Plug 'Valloric/YouCompleteMe'
 Plug 'matze/vim-move'
 Plug 'eparreno/vim-l9'
 Plug 'othree/vim-autocomplpop'
 Plug 'ryanoasis/vim-devicons' " After install this plugins install InconsolataGo or InconsolataLGC from NerdFonts
+Plug 'tpope/vim-abolish'
+
 
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
@@ -166,6 +171,12 @@ let g:WebDevIconsOS = 'Darwin'
  set termguicolors
  set background=dark
 
+ " For Dracula theme
+" let g:dracula_italic = 0
+" colorscheme dracula
+" highlight Normal ctermbg=None
+ " @For Dracula theme
+
 colorscheme vimterial
 " colorscheme nova
 
@@ -230,10 +241,9 @@ hi Visual cterm=NONE ctermbg=239 ctermfg=174 guibg=#9BB1D3
 "
 " CursorLine & cursorcolumn
 "
-" hi CursorLine   ctermbg=235
-" hi CursorColumn ctermbg=240 ctermfg=white guibg=darkred guifg=white
-" nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>                                                                                                             
-" set cursorline! cursorcolumn! 
+hi CursorLine  cterm=NONE ctermbg=darkred ctermfg=white
+hi CursorColumn ctermbg=240 
+set cursorline! cursorcolumn! 
 
 
 
@@ -288,7 +298,8 @@ nnoremap \ :Ag<SPACE>
 "Syntax checkers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:syntastic_check_on_open = 1
-let g:syntastic_javascript_checkers = ["jshint"] "We should have installed jshint (npm install -g jshint)
+let g:syntastic_javascript_checkers = ["jshint"] "We should have installed jshint (npm install -g jshint) and creat .jshintrc in root project folder 
+"with content '{ 'esversion': 6 }'
 "let syntastic_html_checkers = ['w3']
 let syntastic_scss_checkers = ['scss-lint']
 let g:syntastic_aggregate_errors = 1
@@ -449,7 +460,5 @@ let g:javascript_plugin_flow = 1
 " if &diff
 "     colorscheme up
 " endif
-
-
 
 
